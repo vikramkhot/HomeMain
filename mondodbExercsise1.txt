@@ -1,0 +1,166 @@
+//create database
+use vikramtest1
+
+db.createCollection("users","")
+
+//insert records
+
+db.users.insertOne(
+   {
+      name: "Renu",
+      age: 11,
+      status: "P"
+   }
+)
+
+db.users.insertMany(
+   [
+     { name: "Vikram", age: 30, status: "A", },
+     { name: "Sanjay", age: 37, status: "A", },
+     { name: "Anuradha", age: 33, status: "D", }
+   ])
+
+
+	
+db.users.insert(
+   [
+     { name: "Vivek", age: 36, status: "A", },
+     { name: "Ahana", age: 9, status: "A", },
+     { name: "Ravi", age: 57, status: "D", }
+   ])
+
+
+
+
+
+
+db.persons.insertMany(
+	  [
+		 {
+		   _id: 1,
+		   name: "sue",
+		   age: 19,
+		   type: 1,
+		   status: "P",
+		   favorites: { artist: "Picasso", food: "pizza" },
+		   finished: [ 17, 3 ],
+		   badges: [ "blue", "black" ],
+		   points: [
+			  { points: 85, bonus: 20 },
+			  { points: 85, bonus: 10 }
+		   ]
+		 },
+		 {
+		   _id: 2,
+		   name: "bob",
+		   age: 42,
+		   type: 1,
+		   status: "A",
+		   favorites: { artist: "Miro", food: "meringue" },
+		   finished: [ 11, 25 ],
+		   badges: [ "green" ],
+		   points: [
+			  { points: 85, bonus: 20 },
+			  { points: 64, bonus: 12 }
+		   ]
+		 },
+		 {
+		   _id: 3,
+		   name: "ahn",
+		   age: 22,
+		   type: 2,
+		   status: "A",
+		   favorites: { artist: "Cassatt", food: "cake" },
+		   finished: [ 6 ],
+		   badges: [ "blue", "red" ],
+		   points: [
+			  { points: 81, bonus: 8 },
+			  { points: 55, bonus: 20 }
+		   ]
+		 },
+		 {
+		   _id: 4,
+		   name: "xi",
+		   age: 34,
+		   type: 2,
+		   status: "D",
+		   favorites: { artist: "Chagall", food: "chocolate" },
+		   finished: [ 5, 11 ],
+		   badges: [ "red", "black" ],
+		   points: [
+			  { points: 53, bonus: 15 },
+			  { points: 51, bonus: 15 }
+		   ]
+		 },
+		 {
+		   _id: 5,
+		   name: "xyz",
+		   age: 23,
+		   type: 2,
+		   status: "D",
+		   favorites: { artist: "Noguchi", food: "nougat" },
+		   finished: [ 14, 6 ],
+		   badges: [ "orange" ],
+		   points: [
+			  { points: 71, bonus: 20 }
+		   ]
+		 },
+		 {
+		   _id: 6,
+		   name: "abc",
+		   age: 43,
+		   type: 1,
+		   status: "A",
+		   favorites: { food: "pizza", artist: "Picasso" },
+		   finished: [ 18, 12 ],
+		   badges: [ "black", "blue" ],
+		   points: [
+			  { points: 78, bonus: 8 },
+			  { points: 57, bonus: 7 }
+		   ]
+		 }
+	  ]	)
+
+
+
+
+
+//retrive the records from table/collection
+
+db.persons.find( { status: "A" } )
+
+db.persons.find( { status: { $in: [ "P", "D" ] } } )
+
+db.persons.find( { age: { $lt: 30 } } )
+
+db.persons.find( { status: "A", age: { $lt: 30 } } )
+
+db.persons.find(
+   {
+     $or: [ { status: "A" }, { age: { $lt: 30 } } ]
+   }
+)
+
+db.persons.find(
+   {
+     status: "A",
+     $or: [ { age: { $lt: 30 } }, { type: 1 } ]
+   }
+)
+
+db.persons.find({"favorites.food": "pizza"})
+db.persons.find({"favorites.artist": "Picasso"})
+
+
+
+//update document
+db.persons.updateOne(
+   { "favorites.artist": "Picasso" },
+   {
+     $set: { "favorites.food": "pie", type: 3 },
+     $currentDate: { lastModified: true }
+   }
+)
+
+//projections
+db.persons.find( { status: "A" }, { name: 1, status: 1 } )
