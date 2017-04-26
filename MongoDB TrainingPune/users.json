@@ -1,0 +1,145 @@
+﻿{
+  "_id" : ObjectId("58ff13077cf6a3eba2f39b7b"),
+  "name" : "Renu",
+  "age" : 11.0,
+  "status" : "P"
+}
+{
+  "_id" : ObjectId("58ff13dc7cf6a3eba2f39b7c"),
+  "name" : "Vikram",
+  "age" : 30.0,
+  "status" : "A"
+}
+{
+  "_id" : ObjectId("58ff13dc7cf6a3eba2f39b7d"),
+  "name" : "Sanjay",
+  "age" : 37.0,
+  "status" : "A"
+}
+{
+  "_id" : ObjectId("58ff13dc7cf6a3eba2f39b7e"),
+  "name" : "Anuradha",
+  "age" : 33.0,
+  "status" : "D"
+}
+{
+  "_id" : ObjectId("58ff15397cf6a3eba2f39b7f"),
+  "name" : "Vivek",
+  "age" : 36.0,
+  "status" : "A"
+}
+{
+  "_id" : ObjectId("58ff15397cf6a3eba2f39b80"),
+  "name" : "Ahana",
+  "age" : 9.0,
+  "status" : "A"
+}
+{
+  "_id" : ObjectId("58ff15397cf6a3eba2f39b81"),
+  "name" : "Ravi",
+  "age" : 57.0,
+  "status" : "D"
+}
+{
+  "_id" : 1.0,
+  "name" : "sue",
+  "age" : 19.0,
+  "type" : 0.0,
+  "status" : "P",
+  "favorites" : {
+    "artist" : "Pisanello",
+    "food" : "pizza"
+  },
+  "finished" : [17.0, 3.0],
+  "badges" : ["blue", "black"],
+  "points" : [{
+      "points" : 85.0,
+      "bonus" : 20.0
+    }, {
+      "points" : 85.0,
+      "bonus" : 10.0
+    }],
+  "lastModified" : ISODate("2017-04-26T11:04:11.601Z")
+}
+{
+  "_id" : 2.0,
+  "name" : "bob",
+  "age" : 42.0,
+  "type" : 1.0,
+  "status" : "A",
+  "favorites" : {
+    "artist" : "Miro",
+    "food" : "meringue"
+  },
+  "finished" : [11.0, 25.0],
+  "badges" : ["green"],
+  "points" : [{
+      "points" : 85.0,
+      "bonus" : 20.0
+    }, {
+      "points" : 64.0,
+      "bonus" : 12.0
+    }]
+}
+{
+  "_id" : 3.0,
+  "name" : "ahn",
+  "age" : 22.0,
+  "type" : 2.0,
+  "status" : "A",
+  "favorites" : {
+    "artist" : "Cassatt",
+    "food" : "cake"
+  },
+  "finished" : [6.0],
+  "badges" : ["blue", "red"],
+  "points" : [{
+      "points" : 81.0,
+      "bonus" : 8.0
+    }, {
+      "points" : 55.0,
+      "bonus" : 20.0
+    }]
+}
+{
+  "_id" : 4.0,
+  "name" : "xi",
+  "age" : 34.0,
+  "type" : 2.0,
+  "status" : "D",
+  "favorites" : {
+    "artist" : "Chagall",
+    "food" : "chocolate"
+  },
+  "finished" : [5.0, 11.0],
+  "badges" : ["red", "black"],
+  "points" : [{
+      "points" : 53.0,
+      "bonus" : 15.0
+    }, {
+      "points" : 51.0,
+      "bonus" : 15.0
+    }]
+}
+{
+  "_id" : 5.0,
+  "name" : "mee",
+  "age" : 25.0,
+  "type" : 1.0,
+  "status" : "A",
+  "favorites" : {
+    "artist" : "Matisse",
+    "food" : "mango"
+  }
+}
+{
+  "_id" : 6.0,
+  "name" : "amy",
+  "age" : 34.0,
+  "type" : 2.0,
+  "status" : "P",
+  "favorites" : {
+    "artist" : "Dali",
+    "food" : "donuts"
+  }
+}
